@@ -1,0 +1,126 @@
+:root {
+  --radius: 10px;
+  --mainPadding: 25px;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+  display: flex;
+  padding: 0%;
+  height: 400px;
+  width: 500px;
+  margin: 50px auto;
+}
+
+@media (max-width: 480px) {
+  .container {
+    display: grid;
+    width: 500px;
+    margin: 0%;
+  }
+}
+
+.container .pic,
+.container .text {
+  width: 50%;
+}
+
+@media (max-width: 480px) {
+  .container .pic,
+  .container .text {
+    width: 100%;
+  }
+}
+
+.container .pic img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+}
+
+@media (max-width: 480px) {
+  .container .pic img {
+    content: url(./images/image-product-mobile.jpg);
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+}
+
+.container .text {
+  background-color: #fff;
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  padding: var(--mainPadding);
+  line-height: 1;
+  width: 40%;
+}
+
+@media (max-width: 480px) {
+  .container .text {
+    width: 100%;
+    border-style: none;
+    box-sizing: border-box;
+    border-radius: 0 0 var(--radius) var(--radius);
+  }
+}
+
+.container .text h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0, 50%);
+}
+
+.container .text h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+
+.container .text p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: rgb(0, 0, 0, 50%);
+}
+
+.container .text .price {
+  font-family: "Fraunces", serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+
+.container .text .price span {
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: line-through;
+  vertical-align: 50%;
+  padding-left: 10px;
+}
+
+.container .text .but button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  width: 100%;
+  padding-block: 10px;
+  color: #fff;
+  background-color: hsl(158, 36%, 37%);
+  border-style: none;
+  border-radius: var(--radius);
+  margin-top: var(--mainPadding);
+  cursor: pointer;
+}
+
+.container .text .but button:hover {
+  background-color: hsl(157, 36%, 27%);
+}
+
+.container .text .but img {
+  width: 12px;
+}
